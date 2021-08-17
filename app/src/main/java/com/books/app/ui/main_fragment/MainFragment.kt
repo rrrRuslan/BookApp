@@ -43,6 +43,7 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         listBooksGenre.clear()
+        mapGenreBooks.clear()
 
         viewModel.sliderData.observe(viewLifecycleOwner){
             val imageList = mutableListOf<SlideModel>()
