@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_backgr"
+    android:orientation="vertical"
+    tools:context=".ui.main_fragment.MainFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_backgr"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_screen_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Library"
+            app:titleTextColor="@color/purple_text" />
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/main_screen_slider"
+            android:layout_width="match_parent"
+            android:layout_height="167dp"
+            android:layout_marginHorizontal="15dp"
+            app:iss_auto_cycle="true"
+            app:iss_corner_radius="50"
+            app:iss_delay="0"
+            app:iss_period="3000" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/main_screen_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
